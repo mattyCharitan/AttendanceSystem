@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Repositories.Models;
 using System;
 
 namespace Repositories
@@ -23,7 +22,7 @@ namespace Repositories
             // services.AddScoped<IMeasurementRepository, MeasurementRepository>();
             
             string connStr = ReplaceWithCurrentLocation("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = {0}\\DB\\AttendanceDatabase.mdf; Integrated Security = True;");
-            services.AddDbContext<AttendanceContext>(options => options.UseSqlServer(connStr));
+      //      services.AddDbContext<AttendanceContext>(options => options.UseSqlServer(connStr));
         }
     }
 }
