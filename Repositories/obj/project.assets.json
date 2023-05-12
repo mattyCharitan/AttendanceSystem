@@ -3509,23 +3509,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\מטי\\.nuget\\packages\\": {},
+    "C:\\Users\\חריטן מאטיל\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\מטי\\source\\repos\\Repositories\\Repositories\\Repositories.csproj",
+      "projectUniqueName": "C:\\Users\\חריטן מאטיל\\Source\\Repos\\AttendanceSystem\\Repositories\\Repositories.csproj",
       "projectName": "Repositories",
-      "projectPath": "C:\\Users\\מטי\\source\\repos\\Repositories\\Repositories\\Repositories.csproj",
-      "packagesPath": "C:\\Users\\מטי\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\מטי\\source\\repos\\Repositories\\Repositories\\obj\\",
+      "projectPath": "C:\\Users\\חריטן מאטיל\\Source\\Repos\\AttendanceSystem\\Repositories\\Repositories.csproj",
+      "packagesPath": "C:\\Users\\חריטן מאטיל\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\חריטן מאטיל\\Source\\Repos\\AttendanceSystem\\Repositories\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\מטי\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\חריטן מאטיל\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3534,7 +3534,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
