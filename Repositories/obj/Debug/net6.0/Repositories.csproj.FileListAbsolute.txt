@@ -26,3 +26,17 @@ C:\Users\חריטן מאטיל\Source\Repos\AttendanceSystem\Repositories\obj\De
 C:\Users\חריטן מאטיל\Source\Repos\AttendanceSystem\Repositories\obj\Debug\net6.0\Repositories.pdb
 C:\Users\חריטן מאטיל\Source\Repos\AttendanceSystem\Repositories\obj\Debug\net6.0\Repositories.genruntimeconfig.cache
 C:\Users\חריטן מאטיל\Source\Repos\AttendanceSystem\Repositories\obj\Debug\net6.0\ref\Repositories.dll
+C:\Users\מטי\Source\Repos\AttendanceSystem\Repositories\bin\Debug\net6.0\Repositories.deps.json
+C:\Users\מטי\Source\Repos\AttendanceSystem\Repositories\bin\Debug\net6.0\Repositories.runtimeconfig.json
+C:\Users\מטי\Source\Repos\AttendanceSystem\Repositories\bin\Debug\net6.0\Repositories.dll
+C:\Users\מטי\Source\Repos\AttendanceSystem\Repositories\bin\Debug\net6.0\Repositories.pdb
+C:\Users\מטי\Source\Repos\AttendanceSystem\Repositories\obj\Debug\net6.0\Repositories.csproj.AssemblyReference.cache
+C:\Users\מטי\Source\Repos\AttendanceSystem\Repositories\obj\Debug\net6.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\מטי\Source\Repos\AttendanceSystem\Repositories\obj\Debug\net6.0\Repositories.AssemblyInfoInputs.cache
+C:\Users\מטי\Source\Repos\AttendanceSystem\Repositories\obj\Debug\net6.0\Repositories.AssemblyInfo.cs
+C:\Users\מטי\Source\Repos\AttendanceSystem\Repositories\obj\Debug\net6.0\Repositories.csproj.CoreCompileInputs.cache
+C:\Users\מטי\Source\Repos\AttendanceSystem\Repositories\obj\Debug\net6.0\Repositories.dll
+C:\Users\מטי\Source\Repos\AttendanceSystem\Repositories\obj\Debug\net6.0\refint\Repositories.dll
+C:\Users\מטי\Source\Repos\AttendanceSystem\Repositories\obj\Debug\net6.0\Repositories.pdb
+C:\Users\מטי\Source\Repos\AttendanceSystem\Repositories\obj\Debug\net6.0\Repositories.genruntimeconfig.cache
+C:\Users\מטי\Source\Repos\AttendanceSystem\Repositories\obj\Debug\net6.0\ref\Repositories.dll
