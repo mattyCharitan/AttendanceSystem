@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AppServices.Interfaces
 {
-    internal interface IMonthlyAttendanceService:IService<MonthlyAttendanceDTO>
+    public interface IMonthlyAttendanceService:IService<MonthlyAttendanceDTO>
     {
     }
 }

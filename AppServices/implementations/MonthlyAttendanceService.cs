@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace AppServices.implementations
 {
-    internal class MonthlyAttendanceService : IMonthlyAttendanceService
+    public class MonthlyAttendanceService : IMonthlyAttendanceService
     {
         IMonthlyAttendenceRepo monthlyAttendenceRepo;
 
