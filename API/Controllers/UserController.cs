@@ -19,5 +19,31 @@ namespace API.Controllers
         {
             return await userService.GetAll();
         }
+
+        [HttpGet("{id}")]
+        public async Task<UserDTO> Get(int id)
+        {
+            return await userService.GetById(id);
+        }
+
+        [HttpDelete]
+        public async Task<bool> Delete(int id)
+        {
+            return await userService.Delete(id);
+        }
+
+        [HttpPost]
+
+        public async Task<int> Create(UserDTO userDTO)
+        {
+            return await userService.Create(userDTO);
+        }
+
+        [HttpPut]
+
+        public async Task<int> Update(int id, UserDTO userDTO)
+        {
+            return await userService.Update(id, userDTO);
+        }
     }
 }

@@ -16,6 +16,8 @@ namespace AppServices
         {
             services.AddScoped<IUserSerivce, UserService>();
             services.AddScoped<IRoleService, RoleService>();
+            services.AddScoped<IMonthlyAttendanceService, MonthlyAttendanceService>();
+            services.AddScoped<IStudentService, StudentService>();
             services.AddRepositories();
         }
     }
