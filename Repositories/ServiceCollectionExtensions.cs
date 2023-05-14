@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Repositories.Implementations;
+using Repositories.Interfaces;
 using Repositories.Modules;
 using System;
 
@@ -17,10 +19,10 @@ namespace Repositories
         }
         public static void AddRepositories(this IServiceCollection services)
         {
-            // services.AddScoped<IUserRepository, UserRepository>();
-            // services.AddScoped<IItemRepository, ItemRepository>();
-            // services.AddScoped<IOutfitRepository, OutfitRepository>();
-            // services.AddScoped<IMeasurementRepository, MeasurementRepository>();
+            services.AddScoped<IUserRepo, UserRepo>();
+            services.AddScoped<IStudentRepo, StudentRepo>();
+            services.AddScoped<IRoleRepo, RoleRepo>();
+            services.AddScoped<IMonthlyAttendenceRepo, MonthlyAttendenceRepo>();
             
             string connStr = ReplaceWithCurrentLocation("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = {0}\\DB\\AttendanceDatabase.mdf; Integrated Security = True;");
             services.AddDbContext<AttendanceContext>(options => options.UseSqlServer(connStr));

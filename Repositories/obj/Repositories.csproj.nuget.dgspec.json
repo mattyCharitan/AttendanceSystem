@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\מטי\\Source\\Repos\\AttendanceSystem\\Repositories\\Repositories.csproj": {}
+    "C:\\Users\\מטי\\source\\repos\\AttendanceSystem\\Repositories\\Repositories.csproj": {}
   },
   "projects": {
-    "C:\\Users\\מטי\\Source\\Repos\\AttendanceSystem\\Repositories\\Repositories.csproj": {
+    "C:\\Users\\מטי\\source\\repos\\AttendanceSystem\\Repositories\\Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\מטי\\Source\\Repos\\AttendanceSystem\\Repositories\\Repositories.csproj",
+        "projectUniqueName": "C:\\Users\\מטי\\source\\repos\\AttendanceSystem\\Repositories\\Repositories.csproj",
         "projectName": "Repositories",
-        "projectPath": "C:\\Users\\מטי\\Source\\Repos\\AttendanceSystem\\Repositories\\Repositories.csproj",
+        "projectPath": "C:\\Users\\מטי\\source\\repos\\AttendanceSystem\\Repositories\\Repositories.csproj",
         "packagesPath": "C:\\Users\\מטי\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\מטי\\Source\\Repos\\AttendanceSystem\\Repositories\\obj\\",
+        "outputPath": "C:\\Users\\מטי\\source\\repos\\AttendanceSystem\\Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,6 +45,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNet.WebApi.Core": {
+              "target": "Package",
+              "version": "[5.2.9, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.5, )"
@@ -54,6 +62,18 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.5, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[6.5.0, )"
             }
           },
           "imports": [

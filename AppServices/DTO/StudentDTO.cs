@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AppServices.DTO
 {
-    internal class StudentDTO
+    public class StudentDTO
     {
         public string? StudentName { get; set; }
 
