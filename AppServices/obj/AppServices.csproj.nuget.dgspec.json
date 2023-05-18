@@ -74,18 +74,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\מטי\\Source\\Repos\\AttendanceSystem\\Repositories\\Repositories.csproj": {
+    "C:\\Users\\מטי\\source\\repos\\AttendanceSystem\\Repositories\\Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\מטי\\Source\\Repos\\AttendanceSystem\\Repositories\\Repositories.csproj",
+        "projectUniqueName": "C:\\Users\\מטי\\source\\repos\\AttendanceSystem\\Repositories\\Repositories.csproj",
         "projectName": "Repositories",
-        "projectPath": "C:\\Users\\מטי\\Source\\Repos\\AttendanceSystem\\Repositories\\Repositories.csproj",
+        "projectPath": "C:\\Users\\מטי\\source\\repos\\AttendanceSystem\\Repositories\\Repositories.csproj",
         "packagesPath": "C:\\Users\\מטי\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\מטי\\Source\\Repos\\AttendanceSystem\\Repositories\\obj\\",
+        "outputPath": "C:\\Users\\מטי\\source\\repos\\AttendanceSystem\\Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -166,7 +166,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

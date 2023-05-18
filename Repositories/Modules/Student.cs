@@ -13,13 +13,9 @@ public partial class Student
 
     public string? Address { get; set; }
 
-    public int? Parent1Id { get; set; }
-
-    public int? Parent2Id { get; set; }
+    public int? ParentId { get; set; }
 
     public virtual ICollection<MonthlyAttendance> MonthlyAttendances { get; set; } = new List<MonthlyAttendance>();
 
-    public virtual UserAccount? Parent1 { get; set; }
-
-    public virtual UserAccount? Parent2 { get; set; }
+    public virtual UserAccount? Parent { get; set; }
 }

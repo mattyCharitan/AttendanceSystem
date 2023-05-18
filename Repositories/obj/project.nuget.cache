@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vFqJ6onJ+7qlp4dzhCOLUGszkQwVO8LEIjgumPkAndZYHzJ4snVp8L4Ni09Q7sfEnx5IAlt3yQvgiUd/KoEOXQ==",
+  "dgSpecHash": "3IoXroqIviKzw7x/5V5xSS2c0KvWZE/hj/3YtVWshMPgBRk6IBeHbVoys9eqAxO11EBwd7gfnKwdKE7qPIWnDA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\מטי\\Source\\Repos\\AttendanceSystem\\Repositories\\Repositories.csproj",
+  "projectFilePath": "C:\\Users\\מטי\\source\\repos\\AttendanceSystem\\Repositories\\Repositories.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\מטי\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\מטי\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

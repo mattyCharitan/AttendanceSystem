@@ -20,8 +20,8 @@ namespace AppServices.implementations
         }
         public Task<int> Create(UserDTO entity)
         {
-           UserAccount user  = Mapping.Mapper.Map<UserAccount>(entity);
-           return userRepo.Create(user);
+            UserAccount user  = Mapping.Mapper.Map<UserAccount>(entity);
+            return userRepo.Create(user);
         }
 
         public Task<bool> Delete(int id)

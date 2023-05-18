@@ -2,6 +2,9 @@
 using AppServices.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Repositories.Implementations;
+using Repositories.Interfaces;
+using Repositories.Modules;
 
 namespace API.Controllers
 {
@@ -9,9 +12,12 @@ namespace API.Controllers
     public class UserController : AttendenceBaseController
     {
         IUserSerivce userService;
-        public UserController(IUserSerivce userService)
+        IUserRepo userRepo;
+
+        public UserController(IUserSerivce userService, IUserRepo userRepo)
         {
             this.userService = userService;
+            this.userRepo = userRepo;
         }
 
         [HttpGet]
@@ -32,12 +38,12 @@ namespace API.Controllers
             return await userService.Delete(id);
         }
 
-        [HttpPost]
+        //[HttpPost]
 
-        public async Task<int> Create(UserDTO userDTO)
-        {
-            return await userService.Create(userDTO);
-        }
+        //public async Task<int> Create(UserDTO userDTO)
+        //{
+        //    return await userService.Create(userDTO);
+        //}
 
         [HttpPut]
 
@@ -45,5 +51,16 @@ namespace API.Controllers
         {
             return await userService.Update(id, userDTO);
         }
+
+        [HttpPost]
+
+        public async Task<int> CreateS(UserAccount userDTO)
+        {
+            return await userRepo.Create(userDTO);
+        }
+
+
+
+
     }
 }

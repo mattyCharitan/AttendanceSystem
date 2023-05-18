@@ -15,7 +15,5 @@ public partial class UserAccount
 
     public string? Email { get; set; }
 
-    public virtual ICollection<Student> StudentParent1s { get; set; } = new List<Student>();
-
-    public virtual ICollection<Student> StudentParent2s { get; set; } = new List<Student>();
+    public virtual ICollection<Student> Students { get; set; } = new List<Student>();
 }

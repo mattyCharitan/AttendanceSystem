@@ -25,24 +25,22 @@ public partial class AttendanceContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\מטי\\source\\repos\\Repositories\\DB\\AttendanceDatabase.mdf;Integrated Security=True;Connect Timeout=30");
+        => optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\מטי\\source\\repos\\AttendanceSystem\\DB\\AttendanceDatabase.mdf;Integrated Security=True;Connect Timeout=30");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<MonthlyAttendance>(entity =>
         {
-            entity.HasKey(e => e.AttendanceId).HasName("PK__Monthly___20D6A968B8C55902");
+            entity.HasKey(e => e.AttendanceId).HasName("PK__Monthly___20D6A96851732A2C");
 
             entity.ToTable("Monthly_Attendance");
 
-            entity.Property(e => e.AttendanceId)
-                .ValueGeneratedNever()
-                .HasColumnName("attendance_id");
+            entity.Property(e => e.AttendanceId).HasColumnName("attendance_id");
             entity.Property(e => e.Date)
                 .HasColumnType("date")
                 .HasColumnName("date");
             entity.Property(e => e.Status)
-                .HasMaxLength(20)
+                .HasMaxLength(50)
                 .IsUnicode(false)
                 .UseCollation("SQL_Latin1_General_CP1_CI_AS")
                 .HasColumnName("status");
@@ -50,18 +48,16 @@ public partial class AttendanceContext : DbContext
 
             entity.HasOne(d => d.Student).WithMany(p => p.MonthlyAttendances)
                 .HasForeignKey(d => d.StudentId)
-                .HasConstraintName("FK__Monthly_A__stude__3E52440B");
+                .HasConstraintName("FK_Monthly_Attendance_Student");
         });
 
         modelBuilder.Entity<Student>(entity =>
         {
-            entity.HasKey(e => e.StudentId).HasName("PK__Student__2A33069AC4942C07");
+            entity.HasKey(e => e.StudentId).HasName("PK__Student__2A33069A6B48AE38");
 
             entity.ToTable("Student");
 
-            entity.Property(e => e.StudentId)
-                .ValueGeneratedNever()
-                .HasColumnName("student_id");
+            entity.Property(e => e.StudentId).HasColumnName("student_id");
             entity.Property(e => e.Address)
                 .HasMaxLength(100)
                 .IsUnicode(false)
@@ -70,32 +66,25 @@ public partial class AttendanceContext : DbContext
             entity.Property(e => e.DateOfBirth)
                 .HasColumnType("date")
                 .HasColumnName("date_of_birth");
-            entity.Property(e => e.Parent1Id).HasColumnName("parent1_id");
-            entity.Property(e => e.Parent2Id).HasColumnName("parent2_id");
+            entity.Property(e => e.ParentId).HasColumnName("parent_id");
             entity.Property(e => e.StudentName)
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .UseCollation("SQL_Latin1_General_CP1_CI_AS")
                 .HasColumnName("student_name");
 
-            entity.HasOne(d => d.Parent1).WithMany(p => p.StudentParent1s)
-                .HasForeignKey(d => d.Parent1Id)
-                .HasConstraintName("FK__Student__parent1__3A81B327");
-
-            entity.HasOne(d => d.Parent2).WithMany(p => p.StudentParent2s)
-                .HasForeignKey(d => d.Parent2Id)
-                .HasConstraintName("FK__Student__parent2__3B75D760");
+            entity.HasOne(d => d.Parent).WithMany(p => p.Students)
+                .HasForeignKey(d => d.ParentId)
+                .HasConstraintName("FK__Student__parent___5441852A");
         });
 
         modelBuilder.Entity<UserAccount>(entity =>
         {
-            entity.HasKey(e => e.UserId).HasName("PK__User Acc__B9BE370F12055ED5");
+            entity.HasKey(e => e.UserId).HasName("PK__User Acc__B9BE370F174F4023");
 
             entity.ToTable("User Account");
 
-            entity.Property(e => e.UserId)
-                .ValueGeneratedNever()
-                .HasColumnName("user_id");
+            entity.Property(e => e.UserId).HasColumnName("user_id");
             entity.Property(e => e.DateOfBirth)
                 .HasColumnType("date")
                 .HasColumnName("date_of_birth");
@@ -127,7 +116,7 @@ public partial class AttendanceContext : DbContext
 
             entity.HasOne(d => d.User).WithMany()
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__User_Role__user___37A5467C");
+                .HasConstraintName("FK__User_Role__user___5165187F");
         });
 
         OnModelCreatingPartial(modelBuilder);

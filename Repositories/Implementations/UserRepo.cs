@@ -4,6 +4,7 @@ using Repositories.Modules;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,6 +23,7 @@ namespace Repositories.Implementations
             await context.SaveChangesAsync();
             return entity.UserId;
         }
+        
 
         public async Task<bool> Delete(int id)
         {

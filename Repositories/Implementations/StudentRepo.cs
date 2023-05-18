@@ -40,8 +40,7 @@ namespace Repositories.Implementations
         public async Task<List<Student>> GetAll()
         {
             return await context.Students
-                .Include(s => s.Parent1)
-                .Include(s => s.Parent2)
+                .Include(s => s.Parent)            
                 .Include(s => s.MonthlyAttendances)
                 .ToListAsync<Student>();      
         }
@@ -49,8 +48,7 @@ namespace Repositories.Implementations
         public async Task<Student> GetById(int id)
         {
             return await context.Students
-                .Include(s => s.Parent1)
-                .Include(s => s.Parent2)
+                .Include(s => s.Parent)
                 .Include(s => s.MonthlyAttendances)
                 .FirstOrDefaultAsync(s => s.StudentId == id);
         }
@@ -67,8 +65,8 @@ namespace Repositories.Implementations
             student.StudentName = entity.StudentName;
             student.DateOfBirth = entity.DateOfBirth;
             student.Address = entity.Address;
-            student.Parent1Id = entity.Parent1Id;
-            student.Parent2Id = entity.Parent2Id;
+            student.ParentId = entity.ParentId;
+            
 
 
             await context.SaveChangesAsync();

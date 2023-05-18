@@ -1,11 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\API\\Controllers",
-    "\\AppServices",
-    "\\AppServices\\implementations",
-    "\\AppServices\\Interfaces"
+    ""
   ],
-  "SelectedNode": "\\AppServices\\implementations",
+  "SelectedNode": "\\Repositories.sln",
   "PreviewInSolutionExplorer": false
 }

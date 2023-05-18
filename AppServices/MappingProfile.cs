@@ -14,7 +14,7 @@ namespace AppServices
         public MappingProfile()
         {
             CreateMap<UserAccount, UserDTO>();
-            CreateMap<UserDTO, UserAccount>();
+            CreateMap<UserDTO, UserAccount>().ForMember(dest => dest.UserId, opt => opt.Ignore());
             CreateMap<Student, StudentDTO>();
             CreateMap<StudentDTO, Student>();
             CreateMap<UserRole, RoleDTO>();
