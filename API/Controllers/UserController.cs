@@ -12,12 +12,10 @@ namespace API.Controllers
     public class UserController : AttendenceBaseController
     {
         IUserSerivce userService;
-        IUserRepo userRepo;
 
-        public UserController(IUserSerivce userService, IUserRepo userRepo)
+        public UserController(IUserSerivce userService)
         {
             this.userService = userService;
-            this.userRepo = userRepo;
         }
 
         [HttpGet]
@@ -38,12 +36,12 @@ namespace API.Controllers
             return await userService.Delete(id);
         }
 
-        //[HttpPost]
+        [HttpPost]
 
-        //public async Task<int> Create(UserDTO userDTO)
-        //{
-        //    return await userService.Create(userDTO);
-        //}
+        public async Task<int> Create(UserDTO userDTO)
+        {
+            return await userService.Create(userDTO);
+        }
 
         [HttpPut]
 
@@ -52,12 +50,12 @@ namespace API.Controllers
             return await userService.Update(id, userDTO);
         }
 
-        [HttpPost]
+        //[HttpPost]
 
-        public async Task<int> CreateS(UserAccount userDTO)
-        {
-            return await userRepo.Create(userDTO);
-        }
+        //public async Task<int> CreateS(UserAccount userDTO)
+        //{
+        //    return await userRepo.Create(userDTO);
+        //}
 
 
 

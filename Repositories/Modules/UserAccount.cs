@@ -5,7 +5,7 @@ namespace Repositories.Modules;
 
 public partial class UserAccount
 {
-    public int UserId { get; set; }
+    public int? UserId { get; set; }
 
     public string? Name { get; set; }
 

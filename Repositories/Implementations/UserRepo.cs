@@ -19,9 +19,10 @@ namespace Repositories.Implementations
         }
         public async Task<int> Create(UserAccount entity)
         {
+            //entity.UserId = null;
             await context.UserAccounts.AddAsync(entity);
             await context.SaveChangesAsync();
-            return entity.UserId;
+            return (int)entity.UserId;
         }
         
 

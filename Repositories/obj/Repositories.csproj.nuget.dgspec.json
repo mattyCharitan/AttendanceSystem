@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\מטי\\source\\repos\\AttendanceSystem\\Repositories\\Repositories.csproj": {}
+    "C:\\Users\\חריטן מאטיל\\source\\repos\\AttendanceSystem\\Repositories\\Repositories.csproj": {}
   },
   "projects": {
-    "C:\\Users\\מטי\\source\\repos\\AttendanceSystem\\Repositories\\Repositories.csproj": {
+    "C:\\Users\\חריטן מאטיל\\source\\repos\\AttendanceSystem\\Repositories\\Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\מטי\\source\\repos\\AttendanceSystem\\Repositories\\Repositories.csproj",
+        "projectUniqueName": "C:\\Users\\חריטן מאטיל\\source\\repos\\AttendanceSystem\\Repositories\\Repositories.csproj",
         "projectName": "Repositories",
-        "projectPath": "C:\\Users\\מטי\\source\\repos\\AttendanceSystem\\Repositories\\Repositories.csproj",
-        "packagesPath": "C:\\Users\\מטי\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\מטי\\source\\repos\\AttendanceSystem\\Repositories\\obj\\",
+        "projectPath": "C:\\Users\\חריטן מאטיל\\source\\repos\\AttendanceSystem\\Repositories\\Repositories.csproj",
+        "packagesPath": "C:\\Users\\חריטן מאטיל\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\חריטן מאטיל\\source\\repos\\AttendanceSystem\\Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\מטי\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\חריטן מאטיל\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -92,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
