@@ -5,7 +5,7 @@ namespace Repositories.Modules;
 
 public partial class UserAccount
 {
-    public int? UserId { get; set; }
+    public int UserId { get; set; }
 
     public string? Name { get; set; }
 
@@ -14,6 +14,8 @@ public partial class UserAccount
     public string? Phone { get; set; }
 
     public string? Email { get; set; }
+
+    public string? Password { get; set; }
 
     public virtual ICollection<Student> Students { get; set; } = new List<Student>();
 }

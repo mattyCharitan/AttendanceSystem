@@ -95,6 +95,11 @@ public partial class AttendanceContext : DbContext
                 .IsUnicode(false)
                 .UseCollation("SQL_Latin1_General_CP1_CI_AS")
                 .HasColumnName("name");
+            entity.Property(e => e.Password)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .UseCollation("SQL_Latin1_General_CP1_CI_AS")
+                .HasColumnName("password");
             entity.Property(e => e.Phone)
                 .HasMaxLength(20)
                 .IsUnicode(false)

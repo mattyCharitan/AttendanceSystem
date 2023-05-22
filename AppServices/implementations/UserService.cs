@@ -21,6 +21,7 @@ namespace AppServices.implementations
         public Task<int> Create(UserDTO entity)
         {
             UserAccount user  = Mapping.Mapper.Map<UserAccount>(entity);
+            user.Password = "123";
             return userRepo.Create(user);
         }
 
