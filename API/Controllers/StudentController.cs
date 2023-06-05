@@ -1,7 +1,9 @@
 ﻿using AppServices.DTO;
 using AppServices.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 namespace API.Controllers
 {
@@ -14,18 +16,21 @@ namespace API.Controllers
             this.studentService = studentService;
         }
 
+        [Authorize(Roles = "admin")]
         [HttpGet]
         public async Task<List<StudentDTO>> GetAll()
         {
             return await studentService.GetAll();
         }
 
+        [Authorize]
         [HttpGet("{id}")]
         public async Task<StudentDTO> Get(int id)
         {
             return await studentService.GetById(id);
         }
 
+        [Authorize]
         [HttpDelete]
         public async Task<bool> Delete(int id)
         {
@@ -39,6 +44,7 @@ namespace API.Controllers
             return await studentService.Create(studentDTO);
         }
 
+        [Authorize]
         [HttpPut]
 
         public async Task<int> Update(int id, StudentDTO studentDTO)

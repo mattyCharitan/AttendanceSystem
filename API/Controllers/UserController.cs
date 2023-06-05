@@ -1,10 +1,12 @@
 ﻿using AppServices.DTO;
 using AppServices.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Repositories.Implementations;
 using Repositories.Interfaces;
 using Repositories.Modules;
+using System.Data;
 
 namespace API.Controllers
 {
@@ -18,18 +20,21 @@ namespace API.Controllers
             this.userService = userService;
         }
 
+        [Authorize(Roles = "admin")]
         [HttpGet]
         public async Task<List<UserDTO>> GetAll()
         {
             return await userService.GetAll();
         }
 
+        [Authorize]
         [HttpGet("{id}")]
         public async Task<UserDTO> Get(int id)
         {
             return await userService.GetById(id);
         }
 
+        [Authorize]
         [HttpDelete]
         public async Task<bool> Delete(int id)
         {
@@ -43,8 +48,8 @@ namespace API.Controllers
             return await userService.Create(userDTO);
         }
 
+        [Authorize]
         [HttpPut]
-
         public async Task<int> Update(int id, UserDTO userDTO)
         {
             return await userService.Update(id, userDTO);
