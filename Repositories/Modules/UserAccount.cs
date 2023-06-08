@@ -18,4 +18,6 @@ public partial class UserAccount
     public string? Password { get; set; }
 
     public virtual ICollection<Student> Students { get; set; } = new List<Student>();
+
+    public virtual ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
 }

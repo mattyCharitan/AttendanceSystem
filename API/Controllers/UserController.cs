@@ -20,7 +20,7 @@ namespace API.Controllers
             this.userService = userService;
         }
 
-        [Authorize(Roles = "admin")]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<List<UserDTO>> GetAll()
         {
@@ -28,10 +28,10 @@ namespace API.Controllers
         }
 
         [Authorize]
-        [HttpGet("{id}")]
-        public async Task<UserDTO> Get(int id)
+        [HttpGet("{userId}")]
+        public async Task<UserDTO> Get(int userId)
         {
-            return await userService.GetById(id);
+            return await userService.GetById(userId);
         }
 
         [Authorize]
@@ -55,12 +55,7 @@ namespace API.Controllers
             return await userService.Update(id, userDTO);
         }
 
-        //[HttpPost]
-
-        //public async Task<int> CreateS(UserAccount userDTO)
-        //{
-        //    return await userRepo.Create(userDTO);
-        //}
+        
 
 
 

@@ -109,14 +109,15 @@ public partial class AttendanceContext : DbContext
 
         modelBuilder.Entity<UserRole>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("User_Role");
+            entity.HasKey(e => e.RoleId);
 
+            entity.ToTable("User_Role");
+
+            entity.Property(e => e.RoleId).HasColumnName("role_id");
             entity.Property(e => e.Role).HasColumnName("role");
             entity.Property(e => e.UserId).HasColumnName("user_id");
 
-            entity.HasOne(d => d.User).WithMany()
+            entity.HasOne(d => d.User).WithMany(p => p.UserRoles)
                 .HasForeignKey(d => d.UserId)
                 .HasConstraintName("FK__User_Role__user___5165187F");
         });

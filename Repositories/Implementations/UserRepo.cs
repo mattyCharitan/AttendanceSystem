@@ -13,16 +13,23 @@ namespace Repositories.Implementations
     public class UserRepo : IUserRepo
     {
         AttendanceContext context;
-        public UserRepo(AttendanceContext context)
+        IRoleRepo roleRepo;
+        public UserRepo(AttendanceContext context, IRoleRepo roleRepo)
         {
             this.context = context;
+            this.roleRepo = roleRepo;
         }
         public async Task<int> Create(UserAccount entity)
         {
             //entity.UserId = null;
             await context.UserAccounts.AddAsync(entity);
             await context.SaveChangesAsync();
+            UserRole ur = new();
+            ur.UserId = entity.UserId;
+            ur.Role = 0;
+            await roleRepo.Create(ur);
             return (int)entity.UserId;
+
         }
         
 
@@ -34,7 +41,8 @@ namespace Repositories.Implementations
             {
                 return false;
             }
-
+            //sould delet all its students 
+            //sould delet its role
             context.UserAccounts.Remove(user);
             await context.SaveChangesAsync();
             return true;

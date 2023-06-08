@@ -9,5 +9,7 @@ public partial class UserRole
 
     public int? Role { get; set; }
 
+    public int RoleId { get; set; }
+
     public virtual UserAccount? User { get; set; }
 }

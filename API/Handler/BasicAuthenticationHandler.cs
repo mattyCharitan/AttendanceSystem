@@ -33,11 +33,27 @@ namespace API.Handler
                 var user = await this.context.UserAccounts.FirstOrDefaultAsync(item => item.Name == username && item.Password == password);
                 if (user == null)
                     return AuthenticateResult.Fail("UnAuthorized");
-
+                int id = user.UserId;
+                UserRole role = await this.context.UserRoles.FirstOrDefaultAsync(role => role.UserId == id);
+                
                 var claim = new[] { new Claim(ClaimTypes.Name, username) };
                 var identity = new ClaimsIdentity(claim, Scheme.Name);
+                if (role != null && role.Role == 1)
+                {
+                    identity.AddClaim(new Claim(ClaimTypes.Role, "Admin"));
+                }
                 var principal = new ClaimsPrincipal(identity);
                 var ticket = new AuthenticationTicket(principal, Scheme.Name);
+
+                if (Request.RouteValues.TryGetValue("userId", out var userIdRouteValue))
+                {
+                    int requestedUserId = Convert.ToInt32(userIdRouteValue);
+
+                    // Check if the authenticated user is the same as the requested user
+                    if (id != requestedUserId &&role.Role == 0)
+                        return AuthenticateResult.Fail("Unauthorized");
+                }
+
 
                 return AuthenticateResult.Success(ticket);
             }
