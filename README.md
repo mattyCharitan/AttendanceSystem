@@ -1,6 +1,6 @@
 # AttendanceSystem
 
-This code is in development by mattyCharitan and hadasar1.
+The software is a team effort of @hadasar1 and @mattyCharitan.
 
 ## Attendance System for Kids
 
